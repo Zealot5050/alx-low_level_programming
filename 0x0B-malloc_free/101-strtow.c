@@ -7,7 +7,6 @@
  *
  * Return: number of words
  */
-
 int count_word(char *s)
 {
 	int flag, c, w;
@@ -25,6 +24,7 @@ int count_word(char *s)
 			w++;
 		}
 	}
+
 	return (w);
 }
 /**
@@ -52,6 +52,7 @@ char **strtow(char *str)
 	for (i = 0; i <= len; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
+		{
 			if (c)
 			{
 				end = i;
@@ -65,12 +66,12 @@ char **strtow(char *str)
 				k++;
 				c = 0;
 			}
+		}
+		else if (c++ == 0)
+			start = i;
 	}
-	else if (c++ == 0)
-		start = i;
-}
 
-matrix[k] = NULL;
+	matrix[k] = NULL;
 
-return (matrix);
+	return (matrix);
 }
