@@ -31,6 +31,20 @@ int is_digit(char *s)
  */
 int _strlen(char *s)
 {
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
+ * errors - handles errors for main
+ */
+void errors(void)
+{
 	printf("Error\n");
 	exit(98);
 }
